@@ -1,7 +1,7 @@
 <template>
   <v-container class="py-0">
     <v-card outlined width="100%">
-      <v-container>
+      <v-container class="pt-1">
         <h2 class="mb-3 primary--text">Methode Details</h2>
         <v-text-field
           v-model="method['Name']"
@@ -34,7 +34,7 @@
                 v-if="key === 'Mode'"
                 :items="method.paramters[key]"
                 outlined
-                placeholder="Instance"
+                placeholder="Mode"
                 hide-details
                 dense
                 v-model="method.paramters.selectedMode"
@@ -93,9 +93,7 @@ export default {
         method = methods.find(element => element.Name === newValue);
       }
       this.method = method ? method : { Name: "", Description: "" };
-      this.method.paramters.selectedMode = method
-        ? this.method.paramters.Mode[0]
-        : "";
+      if (method && method.Name === "Ant Colony") this.method.paramters.Mode[0];
       this.$emit("setMethod", this.method);
     }
   }

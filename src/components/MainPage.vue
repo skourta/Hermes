@@ -20,7 +20,7 @@
           <MethodeDetails v-model="method" @setMethod="setMethod"></MethodeDetails>
         </v-row>
         <v-row>
-          <Results :method="fullMethod" :instance="instance"></Results>
+          <Results :method="method" :instance="instance" :paramters="paramters"></Results>
         </v-row>
       </v-col>
     </v-row>
@@ -51,16 +51,11 @@ export default {
   data: () => ({
     instance: "",
     method: "",
-    fullMethod: {}
+    paramters: {}
   }),
   methods: {
     setMethod(arg) {
-      this.fullMethod.paramters = arg.paramters;
-    }
-  },
-  watch: {
-    instance(newValue) {
-      this.fullMethod.Name = newValue;
+      this.paramters = arg.paramters;
     }
   }
 };

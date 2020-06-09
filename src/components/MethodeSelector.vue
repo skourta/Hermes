@@ -1,7 +1,7 @@
 <template>
   <v-container class="py-0">
     <v-card outlined width="100%">
-      <v-container class="pb-0">
+      <v-container class="pt-1 pb-0">
         <h2 class="primary--text">Choose a Methode</h2>
         <v-radio-group v-model="radioGroup" class="ma-3" hide-details>
           <v-radio :label="`Exact Methode`" :value="0"></v-radio>

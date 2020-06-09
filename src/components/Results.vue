@@ -1,7 +1,7 @@
 <template>
-  <v-container class="py-0">
+  <v-container class="pb-0">
     <v-card outlined width="100%">
-      <v-container>
+      <v-container class="pt-1">
         <h2 class="mb-1 primary--text">Results</h2>
         <v-text-field
           label="Cost"
@@ -45,6 +45,10 @@ export default {
       required: true
     },
     method: {
+      type: String,
+      required: true
+    },
+    paramters: {
       type: Object,
       required: true
     }
@@ -53,12 +57,13 @@ export default {
     return {
       cost: null,
       tour: [],
-      solving: false
+      solving: false,
+      argss: []
     };
   },
   computed: {
     args() {
-      switch (this.method.Name) {
+      switch (this.method) {
         case "Branch And Bound":
           return { name: "BranchNBound", args: [this.instance] };
         case "Ant Colony":
@@ -66,16 +71,16 @@ export default {
             name: "AC",
             args: [
               `--instance=${this.instance}`,
-              `--mode=${this.method.paramters.selectedMode}`,
-              `--colony_size=${this.method.paramters["Colony Size"]}`,
-              `--elitist_weight=${this.method.paramters["Elisit Weight"]}`,
-              `--min_scaling_factor=${this.method.paramters["Min Scaling Factor"]}`,
-              `--alpha=${this.method.paramters["Alpha"]}`,
-              `--beta=${this.method.paramters["Beta"]}`,
-              `--rho=${this.method.paramters["Rho"]}`,
-              `--pheromone_deposit_weight=${this.method.paramters["Pheromone Deposit Weight"]}`,
-              `--initial_pheromone=${this.method.paramters["Initial Pheromone"]}`,
-              `--steps=${this.method.paramters["Steps"]}`
+              `--mode=${this.paramters.selectedMode}`,
+              `--colony_size=${this.paramters["Colony Size"]}`,
+              `--elitist_weight=${this.paramters["Elisit Weight"]}`,
+              `--min_scaling_factor=${this.paramters["Min Scaling Factor"]}`,
+              `--alpha=${this.paramters["Alpha"]}`,
+              `--beta=${this.paramters["Beta"]}`,
+              `--rho=${this.paramters["Rho"]}`,
+              `--pheromone_deposit_weight=${this.paramters["Pheromone Deposit Weight"]}`,
+              `--initial_pheromone=${this.paramters["Initial Pheromone"]}`,
+              `--steps=${this.paramters["Steps"]}`
             ]
           };
         default:

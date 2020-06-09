@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card outlined width="100%">
-      <v-container>
+      <v-container class="pt-1">
         <h2 class="mb-1 primary--text">Instance Details</h2>
         <div class="gridContainer">
           <v-text-field

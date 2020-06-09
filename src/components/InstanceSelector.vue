@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container class="pt-1">
     <v-card outlined width="100%">
-      <v-container>
+      <v-container class="pt-1">
         <h2 class="primary--text">Choose an Instance</h2>
         <v-radio-group v-model="radioGroup" class="ma-3" hide-details>
           <v-radio :label="`Choose one of our provided Instances`" :value="0"></v-radio>
