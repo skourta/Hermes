@@ -2,7 +2,7 @@
   <v-container>
     <v-card outlined width="100%">
       <v-container>
-        <h2>Choose an Instance</h2>
+        <h2 class="primary--text">Choose an Instance</h2>
         <v-radio-group v-model="radioGroup" class="ma-3" hide-details>
           <v-radio :label="`Choose one of our provided Instances`" :value="0"></v-radio>
           <v-col @click="radioGroup = 0">
@@ -65,7 +65,7 @@ export default {
             process.env.NODE_ENV === "development"
               ? "."
               : app.getAppPath("userData")
-          }/Python/burma14.tsp`
+          }/Python/datasets/burma14.tsp`
         },
         {
           name: "bays29",
@@ -73,7 +73,7 @@ export default {
             process.env.NODE_ENV === "development"
               ? "."
               : app.getAppPath("userData")
-          }/Python/bays29.tsp`
+          }/Python/datasets/bays29.tsp`
         }
       ],
       radioGroup: 0

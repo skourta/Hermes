@@ -1,6 +1,8 @@
 "use strict";
 
 import { app, protocol, BrowserWindow, ipcMain, dialog } from "electron";
+import fs from "fs";
+import path from "path";
 import {
     createProtocol,
     installVueDevtools,
@@ -19,8 +21,8 @@ protocol.registerSchemesAsPrivileged([
 async function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1920,
+        height: 1080,
         webPreferences: {
             // Use pluginOptions.nodeIntegration, leave this alone
             // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
@@ -39,7 +41,6 @@ async function createWindow() {
     }
 
     ipcMain.on("readFile", async (event, arg) => {
-        console.log(arg);
         let filePath = "test";
         await dialog
             .showOpenDialog({
@@ -51,6 +52,38 @@ async function createWindow() {
         // console.log(file);
         // Event emitter for sending asynchronous messages
         event.sender.send("fileRead", filePath);
+    });
+
+    ipcMain.on("readInstance", async (event, arg) => {
+        const dataKeywords = [
+            "NODE_COORD_SECTION",
+            "DEPOT_SECTION",
+            "DEMAND_SECTION",
+            "EDGE_DATA_SECTION",
+            "FIXED_EDGES_SECTION",
+            "DISPLAY_DATA_SECTION",
+            "TOUR_SECTION",
+            "EDGE_WEIGHT_SECTION",
+        ];
+        let instanceDetails = {};
+        fs.readFile(path.join(__dirname, "..", arg), "utf8", function(
+            err,
+            data
+        ) {
+            if (err) {
+                return console.log(err);
+            }
+            const lines = data.split("\n");
+            for (let i = 0; i < lines.length; i++) {
+                const elements = lines[i].split(": ");
+                if (dataKeywords.includes(elements[0])) {
+                    break;
+                } else {
+                    instanceDetails[elements[0]] = elements[1];
+                }
+            }
+            event.sender.send("instanceRead", instanceDetails);
+        });
     });
 
     win.on("closed", () => {
