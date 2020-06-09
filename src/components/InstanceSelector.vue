@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-1">
+  <v-container>
     <v-card outlined width="100%">
       <v-container class="pt-1">
         <h2 class="primary--text">Choose an Instance</h2>
