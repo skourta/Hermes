@@ -55,31 +55,13 @@ export default {
   }),
   methods: {
     setMethod(arg) {
-      this.fullMethod = arg;
+      this.fullMethod.paramters = arg.paramters;
     }
   },
-  mounted() {
-    // ipcRenderer.on("fileRead", (event, arg) => {
-    //   console.log(arg);
-    //   PythonShell.run(
-    //     `${
-    //       process.env.NODE_ENV === "development"
-    //         ? "."
-    //         : app.getAppPath("userData")
-    //     }/Python/BranchNBound.py`,
-    //     {
-    //       args: [arg]
-    //     },
-    //     function(err, res) {
-    //       if (err) throw err;
-    //       console.log("finished");
-    //       let tour = res[0].substring(1, res[0].length - 1).split(/\s+/);
-    //       if (!tour[0]) tour.shift();
-    //       console.log(tour);
-    //       console.log(parseFloat(res[1]));
-    //     }
-    //   );
-    // });
+  watch: {
+    instance(newValue) {
+      this.fullMethod.Name = newValue;
+    }
   }
 };
 </script>

@@ -108,12 +108,13 @@ def branchNbound(start, data):
     return visited, summ
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument("instance")
-args = parser.parse_args()
-instance = Parser.TSPInstance(args.instance)
-instance.readData()
-# print(pd.DataFrame(data=instance.data))
-tour, cost = branchNbound(0, np.array(instance.data))
-print(tour)
-print(cost)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("instance")
+    args = parser.parse_args()
+    instance = Parser.TSPInstance(args.instance)
+    instance.readData()
+    # print(pd.DataFrame(data=instance.data))
+    tour, cost = branchNbound(0, np.array(instance.data))
+    print(tour)
+    print(cost)

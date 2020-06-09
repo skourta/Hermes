@@ -57,11 +57,27 @@ export default {
     };
   },
   computed: {
-    fileName() {
+    args() {
       switch (this.method.Name) {
         case "Branch And Bound":
-          return "BranchNBound";
-
+          return { name: "BranchNBound", args: [this.instance] };
+        case "Ant Colony":
+          return {
+            name: "AC",
+            args: [
+              `--instance=${this.instance}`,
+              `--mode=${this.method.paramters.selectedMode}`,
+              `--colony_size=${this.method.paramters["Colony Size"]}`,
+              `--elitist_weight=${this.method.paramters["Elisit Weight"]}`,
+              `--min_scaling_factor=${this.method.paramters["Min Scaling Factor"]}`,
+              `--alpha=${this.method.paramters["Alpha"]}`,
+              `--beta=${this.method.paramters["Beta"]}`,
+              `--rho=${this.method.paramters["Rho"]}`,
+              `--pheromone_deposit_weight=${this.method.paramters["Pheromone Deposit Weight"]}`,
+              `--initial_pheromone=${this.method.paramters["Initial Pheromone"]}`,
+              `--steps=${this.method.paramters["Steps"]}`
+            ]
+          };
         default:
           return "s";
       }
@@ -75,9 +91,9 @@ export default {
           process.env.NODE_ENV === "development"
             ? "."
             : app.getAppPath("userData")
-        }/Python/${this.fileName}.py`,
+        }/Python/${this.args.name}.py`,
         {
-          args: [this.instance]
+          args: this.args.args
         },
         this.hadnleResults
       );
@@ -85,7 +101,7 @@ export default {
     },
     hadnleResults(err, res) {
       if (err) throw err;
-      let tour = res[0].substring(1, res[0].length - 1).split(/\s+/);
+      let tour = res[0].substring(1, res[0].length - 1).split(/,?\s+/);
       if (!tour[0]) tour.shift();
       this.solving = false;
       this.tour = tour;

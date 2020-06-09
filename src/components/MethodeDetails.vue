@@ -72,10 +72,12 @@ export default {
         {
           Name: "Ant Colony",
           paramters: {
-            Mode: ["ACS", "Elitist"],
+            Mode: ["ACS", "Elitist", "MinMax"],
+            "Colony Size": 10,
             "Elisit Weight": 1,
-            "Min Scaling Factor": 10,
+            "Min Scaling Factor": 0.001,
             Alpha: 1.0,
+            Beta: 3.0,
             Rho: 0.1,
             "Pheromone Deposit Weight": 1.0,
             "Initial Pheromone": 1.0,
@@ -91,6 +93,9 @@ export default {
         method = methods.find(element => element.Name === newValue);
       }
       this.method = method ? method : { Name: "", Description: "" };
+      this.method.paramters.selectedMode = method
+        ? this.method.paramters.Mode[0]
+        : "";
       this.$emit("setMethod", this.method);
     }
   }
@@ -101,6 +106,6 @@ export default {
 .gridContainer {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 </style>
