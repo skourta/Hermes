@@ -10,7 +10,7 @@
               :disabled="radioGroup !== 0"
               :items="exacts"
               outlined
-              placeholder="Methode"
+              placeholder="Method"
               hide-details
               dense
               v-model="method"
@@ -22,7 +22,7 @@
               :disabled="radioGroup !== 1"
               :items="heuristics"
               outlined
-              placeholder="Methode"
+              placeholder="Method"
               hide-details
               dense
               v-model="method"
@@ -35,7 +35,7 @@
               :items="metas"
               outlined
               dense
-              placeholder="Methode"
+              placeholder="Method"
               hide-details
               item-value="value"
               v-model="method"
@@ -47,7 +47,7 @@
               :disabled="radioGroup !== 3"
               :items="hybrids"
               outlined
-              placeholder="Methode"
+              placeholder="Method"
               hide-details
               dense
               item-text="name"
