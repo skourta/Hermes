@@ -19,7 +19,7 @@
           </v-col>
           <v-col cols="6" class="pt-0">
             <v-text-field
-              label="Time"
+              label="Time (s)"
               outlined
               dense
               flat
@@ -84,6 +84,17 @@ export default {
       switch (this.method) {
         case "Branch And Bound":
           return { name: "BranchNBound", args: [this.instance] };
+        case "Nearest Neighbour":
+          return {
+            name: "PPV",
+            args: [this.instance, `--start=${this.paramters.start}`]
+          };
+        case "2-OPT":
+          return { name: "2OPT", args: [this.instance] };
+        case "Greedy Algorithm":
+          return { name: "Greedy", args: [this.instance] };
+        case "Exhaustive Search":
+          return { name: "BruteForce", args: [this.instance] };
         case "Ant Colony":
           return {
             name: "AC",
@@ -101,6 +112,9 @@ export default {
               `--steps=${this.paramters["Steps"]}`
             ]
           };
+
+        case "OrTools":
+          return { name: "or_tools", args: [this.instance] };
         default:
           return "s";
       }
@@ -127,6 +141,7 @@ export default {
       if (err) throw err;
       let tour = res[0].substring(1, res[0].length - 1).split(/,?\s+/);
       if (!tour[0]) tour.shift();
+      if (!tour[tour.length - 1]) tour.pop();
       this.solving = false;
       this.tour = tour;
       this.cost = parseFloat(res[1]);

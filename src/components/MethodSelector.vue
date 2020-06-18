@@ -55,6 +55,7 @@
               v-model="method"
             ></v-select>
           </v-col>
+          <v-radio :label="`Or-Tools by Google`" :value="4"></v-radio>
         </v-radio-group>
       </v-container>
     </v-card>
@@ -74,7 +75,7 @@ export default {
     return {
       method: "",
       exacts: ["Branch And Bound", "Exhaustive Search"],
-      heuristics: ["Nearest Neighbour"],
+      heuristics: ["Nearest Neighbour", "Greedy Algorithm", "2-OPT"],
       metas: ["Ant Colony", "Genetic Algorithm"],
       hybrids: ["Genetic Algorithm + 2-OPT", "Ant Colony + 2-OPT"],
       radioGroup: 0
@@ -83,6 +84,9 @@ export default {
   watch: {
     method() {
       this.$emit("input", this.method);
+    },
+    radioGroup(newValue) {
+      if (newValue === 4) this.method = "OrTools";
     }
   }
 };

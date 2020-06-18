@@ -48,6 +48,47 @@
 </template>
 
 <script>
+const methods = [
+  { Name: "Branch And Bound", paramters: {} },
+  { Name: "Exhaustive Search", paramters: {} },
+  {
+    Name: "Nearest Neighbour",
+    paramters: {
+      start: 0
+    }
+  },
+  {
+    Name: "2-OPT",
+    paramters: {}
+  },
+  {
+    Name: "Greedy Algorithm",
+    paramters: {}
+  },
+  {
+    Name: "Ant Colony",
+    paramters: {
+      Mode: ["ACS", "Elitist", "MinMax"],
+      "Colony Size": 10,
+      "Elisit Weight": 1,
+      "Min Scaling Factor": 0.001,
+      Alpha: 1.0,
+      Beta: 3.0,
+      Rho: 0.1,
+      "Pheromone Deposit Weight": 1.0,
+      "Initial Pheromone": 1.0,
+      Steps: 100,
+      selectedMode: "ACS"
+    }
+  },
+  { Name: "Genetic Algorithm", paramters: {} },
+  { Name: "Genetic Algorithm + 2-OPT", paramters: {} },
+  { Name: "Ant Colony + 2-OPT", paramters: {} },
+  {
+    Name: "OrTools",
+    paramters: {}
+  }
+];
 export default {
   name: "MethodDetails",
   props: {
@@ -65,35 +106,11 @@ export default {
   },
   watch: {
     value(newValue) {
-      const methods = [
-        { Name: "Branch And Bound", paramters: {} },
-        { Name: "Exhaustive Search", paramters: {} },
-        { Name: "Nearest Neighbour", paramters: {} },
-        {
-          Name: "Ant Colony",
-          paramters: {
-            Mode: ["ACS", "Elitist", "MinMax"],
-            "Colony Size": 10,
-            "Elisit Weight": 1,
-            "Min Scaling Factor": 0.001,
-            Alpha: 1.0,
-            Beta: 3.0,
-            Rho: 0.1,
-            "Pheromone Deposit Weight": 1.0,
-            "Initial Pheromone": 1.0,
-            Steps: 100
-          }
-        },
-        { Name: "Genetic Algorithm", paramters: {} },
-        { Name: "Genetic Algorithm + 2-OPT", paramters: {} },
-        { Name: "Ant Colony + 2-OPT", paramters: {} }
-      ];
       let method;
       if (newValue) {
         method = methods.find(element => element.Name === newValue);
       }
       this.method = method ? method : { Name: "", Description: "" };
-      if (method && method.Name === "Ant Colony") this.method.paramters.Mode[0];
       this.$emit("setMethod", this.method);
     }
   }
