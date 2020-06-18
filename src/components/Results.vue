@@ -92,7 +92,13 @@ export default {
         case "2-OPT":
           return { name: "2OPT", args: [this.instance] };
         case "Greedy Algorithm":
-          return { name: "Greedy", args: [this.instance] };
+          return {
+            name: "Greedy",
+            args: [
+              this.instance
+              // `--start=${this.paramters.start}`
+            ]
+          };
         case "Exhaustive Search":
           return { name: "BruteForce", args: [this.instance] };
         case "Ant Colony":

@@ -63,7 +63,9 @@ const methods = [
   },
   {
     Name: "Greedy Algorithm",
-    paramters: {}
+    paramters: {
+      // start: 0
+    }
   },
   {
     Name: "Ant Colony",
