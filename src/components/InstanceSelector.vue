@@ -45,7 +45,9 @@
 </template>
 
 <script>
-import { ipcRenderer, app } from "electron";
+import { ipcRenderer } from "electron";
+const app = require("electron").remote.app;
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 export default {
   name: "InstanceSelector",
@@ -61,19 +63,27 @@ export default {
       items: [
         {
           name: "burma14",
-          value: `${
-            process.env.NODE_ENV === "development"
-              ? "."
-              : app.getAppPath("userData")
-          }/Python/datasets/burma14.tsp`
+          value: `${app.getAppPath("userData")}/Python/datasets/burma14.tsp`
         },
         {
           name: "bays29",
-          value: `${
-            process.env.NODE_ENV === "development"
-              ? "."
-              : app.getAppPath("userData")
-          }/Python/datasets/bays29.tsp`
+          value: `${app.getAppPath("userData")}/Python/datasets/bays29.tsp`
+        },
+        {
+          name: "berlin52",
+          value: `${app.getAppPath("userData")}/Python/datasets/berlin52.tsp`
+        },
+        {
+          name: "kroA200",
+          value: `${app.getAppPath("userData")}/Python/datasets/kroA200.tsp`
+        },
+        {
+          name: "ali535",
+          value: `${app.getAppPath("userData")}/Python/datasets/ali535.tsp`
+        },
+        {
+          name: "rl1889",
+          value: `${app.getAppPath("userData")}/Python/datasets/rl1889.tsp`
         }
       ],
       radioGroup: 0
@@ -91,7 +101,9 @@ export default {
   },
   watch: {
     instance() {
-      this.$emit("input", this.instance);
+      if (isDevelopment) {
+        this.$emit("input", this.instance.replace("dist_electron/", ""));
+      } else this.$emit("input", this.instance);
     }
   }
 };

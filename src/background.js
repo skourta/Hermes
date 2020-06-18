@@ -66,10 +66,10 @@ async function createWindow() {
             "EDGE_WEIGHT_SECTION",
         ];
         let instanceDetails = {};
-        fs.readFile(path.join(__dirname, "..", arg), "utf8", function(
-            err,
-            data
-        ) {
+        if (isDevelopment) {
+            arg = arg.replace("dist_electron/", "");
+        }
+        fs.readFile(arg, "utf8", function(err, data) {
             if (err) {
                 return console.log(err);
             }

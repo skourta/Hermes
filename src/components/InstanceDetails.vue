@@ -24,6 +24,33 @@
 
 <script>
 import { ipcRenderer } from "electron";
+
+const instances = [
+  {
+    name: "burma14",
+    cost: 3358
+  },
+  {
+    name: "bays29",
+    cost: 2020
+  },
+  {
+    name: "kroA200",
+    cost: 29874
+  },
+  {
+    name: "rl1889",
+    cost: 337243
+  },
+  {
+    name: "ali535",
+    cost: 218935
+  },
+  {
+    name: "berlin52",
+    cost: 7944
+  }
+];
 export default {
   name: "InstanceDetails",
   props: {
@@ -41,7 +68,8 @@ export default {
         DIMENSION: "",
         EDGE_WEIGHT_TYPE: "",
         EDGE_WEIGHT_FORMAT: "",
-        DISPLAY_DATA_TYPE: ""
+        DISPLAY_DATA_TYPE: "",
+        OPTIMAL_SOLUTION: ""
       },
       radioGroup: 0
     };
@@ -49,6 +77,12 @@ export default {
   mounted() {
     ipcRenderer.on("instanceRead", (event, arg) => {
       this.instance = arg;
+      const instance = instances.find(
+        element => element.name === this.instance.NAME
+      );
+      if (instance) {
+        this.instance.OPTIMAL_SOLUTION = instance.cost;
+      }
     });
   },
   watch: {
