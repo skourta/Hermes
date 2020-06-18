@@ -2,6 +2,7 @@ import numpy as np
 import random
 import argparse
 import Parser
+import time
 
 
 class AC:
@@ -128,14 +129,19 @@ class AC:
     def run(self):
         # print('Started : {0}'.format(self.mode))
         if self.mode == 'ACS':
+            start_time = time.time()
             self._acs()
         elif self.mode == 'Elitist':
+            start_time = time.time()
             self._elitist()
         else:
+            start_time = time.time()
             self._max_min()
+        end_time = time.time()
         # print('Ended : {0}'.format(self.mode))
         print(self.global_best_tour)
         print(self.global_best_distance)
+        print(end_time - start_time)
 
 
 if __name__ == "__main__":

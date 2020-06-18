@@ -3,17 +3,34 @@
     <v-card outlined width="100%">
       <v-container class="pt-1">
         <h2 class="mb-1 primary--text">Results</h2>
-        <v-text-field
-          label="Cost"
-          outlined
-          dense
-          flat
-          hide-details
-          readonly
-          color="primary"
-          class="mt-2"
-          v-model="cost"
-        ></v-text-field>
+        <v-row>
+          <v-col cols="6" class>
+            <v-text-field
+              label="Cost"
+              outlined
+              dense
+              flat
+              hide-details
+              readonly
+              color="primary"
+              class="mt-2"
+              v-model="cost"
+            ></v-text-field>
+          </v-col>
+          <v-col cols="6">
+            <v-text-field
+              label="Time"
+              outlined
+              dense
+              flat
+              hide-details
+              readonly
+              color="primary"
+              class="mt-2"
+              v-model="time"
+            ></v-text-field>
+          </v-col>
+        </v-row>
         <h3 class="mt-2 primary--text">Tour</h3>
         <div class="d-flex align-center">
           <div class="gridContainer my-2 mr-2" v-if="tour.length < 100">
@@ -57,6 +74,7 @@ export default {
     return {
       cost: null,
       tour: [],
+      time: null,
       solving: false,
       argss: []
     };
@@ -91,6 +109,7 @@ export default {
   methods: {
     async launch() {
       this.solving = true;
+      // ipcRenderer.send("test");
       await PythonShell.run(
         `${
           process.env.NODE_ENV === "development"
@@ -111,6 +130,8 @@ export default {
       this.solving = false;
       this.tour = tour;
       this.cost = parseFloat(res[1]);
+      this.time = parseFloat(res[2]);
+      console.log(res);
     }
   }
 };

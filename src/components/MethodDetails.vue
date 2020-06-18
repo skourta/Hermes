@@ -2,7 +2,7 @@
   <v-container class="py-0">
     <v-card outlined width="100%">
       <v-container class="pt-1">
-        <h2 class="mb-3 primary--text">Methode Details</h2>
+        <h2 class="mb-3 primary--text">Method Details</h2>
         <v-text-field
           v-model="method['Name']"
           outlined
@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: "MethodeDetails",
+  name: "MethodDetails",
   props: {
     value: {
       type: String,

@@ -2,9 +2,9 @@
   <v-container class="py-0">
     <v-card outlined width="100%">
       <v-container class="pt-1 pb-0">
-        <h2 class="primary--text">Choose a Methode</h2>
+        <h2 class="primary--text">Choose a Method</h2>
         <v-radio-group v-model="radioGroup" class="ma-3" hide-details>
-          <v-radio :label="`Exact Methode`" :value="0"></v-radio>
+          <v-radio :label="`Exact Method`" :value="0"></v-radio>
           <v-col @click="radioGroup = 0">
             <v-select
               :disabled="radioGroup !== 0"
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: "MethodeSelector",
+  name: "MethodSelector",
   props: {
     value: {
       type: String,

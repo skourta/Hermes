@@ -6,7 +6,7 @@
           <InstanceSelector v-model="instance"></InstanceSelector>
         </v-row>
         <v-row>
-          <MethodeSelector v-model="method"></MethodeSelector>
+          <MethodSelector v-model="method"></MethodSelector>
         </v-row>
       </v-col>
       <v-col cols="8" class="fill-height py-0">
@@ -17,7 +17,7 @@
           <InstanceDetails v-model="instance"></InstanceDetails>
         </v-row>
         <v-row>
-          <MethodeDetails v-model="method" @setMethod="setMethod"></MethodeDetails>
+          <MethodDetails v-model="method" @setMethod="setMethod"></MethodDetails>
         </v-row>
         <v-row>
           <Results :method="method" :instance="instance" :paramters="paramters"></Results>
@@ -32,18 +32,18 @@
 // import { PythonShell } from "python-shell";
 
 import InstanceSelector from "./InstanceSelector";
-import MethodeSelector from "./MethodeSelector";
+import MethodSelector from "./MethodSelector";
 import InstanceDetails from "./InstanceDetails";
-import MethodeDetails from "./MethodeDetails";
+import MethodDetails from "./MethodDetails";
 import Bar from "./Bar";
 import Results from "./Results";
 export default {
   name: "MainPage",
   components: {
     InstanceSelector,
-    MethodeSelector,
+    MethodSelector,
     InstanceDetails,
-    MethodeDetails,
+    MethodDetails,
     Results,
     Bar
   },
