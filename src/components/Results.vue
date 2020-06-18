@@ -153,6 +153,24 @@ export default {
       this.cost = parseFloat(res[1]);
       this.time = parseFloat(res[2]);
       console.log(res);
+      let path = this.instance.split("/");
+      const instanceName = path[path.length - 1];
+      console.log(
+        this.$db
+          .get("results")
+          .push({
+            instance: instanceName,
+            method: {
+              name: this.method,
+              parameters: this.paramters
+            },
+            cost: this.cost,
+            tour: this.tour,
+            time: this.time,
+            date: new Date()
+          })
+          .write()
+      );
     }
   }
 };
