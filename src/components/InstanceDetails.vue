@@ -36,19 +36,19 @@ const instances = [
   },
   {
     name: "kroA200",
-    cost: 29874
+    cost: 26524
   },
   {
     name: "rl1889",
-    cost: 337243
+    cost: 316536
   },
   {
     name: "ali535",
-    cost: 218935
+    cost: 202310
   },
   {
     name: "berlin52",
-    cost: 7944
+    cost: 7542
   }
 ];
 export default {
