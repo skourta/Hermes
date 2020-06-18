@@ -31,13 +31,9 @@
             ></v-text-field>
           </v-col>
         </v-row>
-        <h3 class="mt-2 primary--text">Tour</h3>
+
+        <DisplayTour :tour="tour"></DisplayTour>
         <div class="d-flex align-center">
-          <div class="gridContainer my-2 mr-2" v-if="tour.length < 100">
-            <div class="d-flex" v-for="item in tour" :key="item">
-              <div class="dot">{{ item }}</div>→
-            </div>
-          </div>
           <v-spacer></v-spacer>
           <v-btn
             :disabled="!instance || Object.keys(method).length === 0"
@@ -52,10 +48,14 @@
 </template>
 
 <script>
+import DisplayTour from "./DisplayTour";
 import { app } from "electron";
 import { PythonShell } from "python-shell";
 export default {
   name: "Results",
+  components: {
+    DisplayTour
+  },
   props: {
     instance: {
       type: String,
