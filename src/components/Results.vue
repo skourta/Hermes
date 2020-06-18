@@ -4,7 +4,7 @@
       <v-container class="pt-1">
         <h2 class="mb-1 primary--text">Results</h2>
         <v-row>
-          <v-col cols="6" class>
+          <v-col cols="6" class="pt-0">
             <v-text-field
               label="Cost"
               outlined
@@ -17,7 +17,7 @@
               v-model="cost"
             ></v-text-field>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="6" class="pt-0">
             <v-text-field
               label="Time"
               outlined

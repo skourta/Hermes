@@ -1,6 +1,5 @@
 import numpy as np
 import Parser
-import pandas as pd
 import argparse
 import time
 
