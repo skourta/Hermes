@@ -17,29 +17,55 @@
           class="mb-3 primary--text"
           v-if="method.paramters && Object.keys(method.paramters).length > 0"
         >Parameters</h3>
-        <div class="gridContainer mt-2" v-if="method.paramters">
-          <div v-for="key in Object.keys(method.paramters)" :key="key">
-            <v-text-field
-              v-if="(key !== 'Mode') && (key !== 'selectedMode')"
-              v-model="method.paramters[key]"
-              outlined
-              dense
-              flat
-              hide-details
-              color="primary"
-              :label="key"
-            ></v-text-field>
-            <div v-else>
-              <v-select
-                v-if="key === 'Mode'"
-                :items="method.paramters[key]"
+        <div v-if="method.paramters">
+          <div class="gridContainer mt-2" v-if=" method.Name !== 'Genetic Algorithm'">
+            <div v-for="key in Object.keys(method.paramters)" :key="key">
+              <v-text-field
+                v-if="(key !== 'Mode') && (key !== 'selectedMode')"
+                v-model="method.paramters[key]"
                 outlined
-                placeholder="Mode"
-                hide-details
                 dense
-                v-model="method.paramters.selectedMode"
-              ></v-select>
+                flat
+                hide-details
+                color="primary"
+                :label="key"
+              ></v-text-field>
+              <div v-else>
+                <v-select
+                  v-if="key === 'Mode'"
+                  :items="method.paramters[key]"
+                  outlined
+                  placeholder="Mode"
+                  hide-details
+                  dense
+                  v-model="method.paramters.selectedMode"
+                ></v-select>
+              </div>
             </div>
+          </div>
+          <div class="gridContainer mt-2" v-else>
+            <div v-for="key in parametersAG.nonSelects" :key="key">
+              <v-text-field
+                v-model="method.paramters[key]"
+                outlined
+                dense
+                flat
+                hide-details
+                color="primary"
+                :label="key"
+              ></v-text-field>
+            </div>
+            <v-select
+              v-for="select in parametersAG.selects"
+              :key="select"
+              :items="method.paramters[select]"
+              outlined
+              placeholder="Mode"
+              hide-details
+              dense
+              v-model="method.paramters[select.slice(0,-1)]"
+              :label="select"
+            ></v-select>
           </div>
         </div>
       </v-container>
@@ -83,7 +109,36 @@ const methods = [
       selectedMode: "ACS"
     }
   },
-  { Name: "Genetic Algorithm", paramters: {} },
+  {
+    Name: "Genetic Algorithm",
+    paramters: {
+      population_size: 28,
+      nbgenerations: 2,
+      parents_size: 14,
+      eliteSize: 2,
+      genAlgos: ["PPV", "Random"],
+      SelectionAlgos: ["Tournoi", "Elitiste", "RouletteWheel"],
+      nbPointCroisement: 2,
+      probaMutation: "None",
+      remplacementAlgos: [
+        "Tournoi",
+        "Elitiste",
+        "RouletteWheel",
+        "Generationnel"
+      ],
+      remplacementAlgo: "Tournoi",
+      genAlgo: "PPV",
+      SelectionAlgo: "Tournoi"
+    }
+  },
+  {
+    Name: "Tabu Search",
+    paramters: {
+      iterations: 1000,
+      size: 20,
+      start: 0
+    }
+  },
   { Name: "Genetic Algorithm + 2-OPT", paramters: {} },
   { Name: "Ant Colony + 2-OPT", paramters: {} },
   {
@@ -105,6 +160,32 @@ export default {
         Name: ""
       }
     };
+  },
+  computed: {
+    parametersAG() {
+      let nonSelects = [];
+      let selects = [];
+      for (const key in this.method.paramters) {
+        if (
+          key !== "genAlgos" &&
+          key !== "genAlgo" &&
+          key !== "remplacementAlgos" &&
+          key !== "remplacementAlgo" &&
+          key !== "SelectionAlgos" &&
+          key !== "SelectionAlgo"
+        ) {
+          nonSelects.push(key);
+        } else {
+          if (
+            key !== "genAlgo" &&
+            key !== "remplacementAlgo" &&
+            key !== "SelectionAlgo"
+          )
+            selects.push(key);
+        }
+      }
+      return { nonSelects: nonSelects, selects: selects };
+    }
   },
   watch: {
     value(newValue) {

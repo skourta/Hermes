@@ -118,6 +118,32 @@ export default {
               `--steps=${this.paramters["Steps"]}`
             ]
           };
+        case "Genetic Algorithm":
+          return {
+            name: "AG",
+            args: [
+              this.instance,
+              `--population_size=${this.paramters.population_size}`,
+              `--nbgenerations=${this.paramters["nbgenerations"]}`,
+              `--parents_size=${this.paramters["parents_size"]}`,
+              `--eliteSize=${this.paramters["eliteSize"]}`,
+              `--genAlgo=${this.paramters["genAlgo"]}`,
+              `--SelectionAlgo=${this.paramters["SelectionAlgo"]}`,
+              `--nbPointCroisement=${this.paramters["nbPointCroisement"]}`,
+              `--probaMutation=${this.paramters["probaMutation"]}`,
+              `--remplacementAlgo=${this.paramters["remplacementAlgo"]}`
+            ]
+          };
+        case "Tabu Search":
+          return {
+            name: "Tabu",
+            args: [
+              this.instance,
+              `--iterations=${this.paramters.iterations}`,
+              `--size=${this.paramters.size}`,
+              `--start=${this.paramters.start}`
+            ]
+          };
 
         case "OrTools":
           return { name: "or_tools", args: [this.instance] };
@@ -152,25 +178,24 @@ export default {
       this.tour = tour;
       this.cost = parseFloat(res[1]);
       this.time = parseFloat(res[2]);
-      console.log(res);
+      // console.log(res);
       let path = this.instance.split("/");
       const instanceName = path[path.length - 1];
-      console.log(
-        this.$db
-          .get("results")
-          .push({
-            instance: instanceName,
-            method: {
-              name: this.method,
-              parameters: this.paramters
-            },
-            cost: this.cost,
-            tour: this.tour,
-            time: this.time,
-            date: new Date()
-          })
-          .write()
-      );
+
+      this.$db
+        .get("results")
+        .push({
+          instance: instanceName,
+          method: {
+            name: this.method,
+            parameters: this.paramters
+          },
+          cost: this.cost,
+          tour: this.tour,
+          time: this.time,
+          date: new Date()
+        })
+        .write();
     }
   }
 };

@@ -328,6 +328,267 @@
       ],
       "time": 0.030425310134887695,
       "date": "2020-06-18T19:28:24.902Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 0.06842041015625,
+      "date": "2020-06-20T18:57:44.535Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 17.990538835525513,
+      "date": "2020-06-20T19:04:25.968Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 1.8494532108306885,
+      "date": "2020-06-20T19:05:37.267Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 1.5207505226135254,
+      "date": "2020-06-20T19:06:03.354Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 0.18032240867614746,
+      "date": "2020-06-20T19:06:11.304Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 0.01818704605102539,
+      "date": "2020-06-20T19:06:17.583Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 0.03879833221435547,
+      "date": "2020-06-20T19:06:23.399Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "5",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 0.1048583984375,
+      "date": "2020-06-20T19:06:33.462Z"
     }
   ]
 }
