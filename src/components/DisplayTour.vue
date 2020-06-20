@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="mt-2 primary--text">Tour</h3>
+    <h3 class="mt-1 primary--text">Tour</h3>
     <div class="gridContainer my-2 mr-2" v-if="tour.length < 100">
       <div class="d-flex" v-for="item in tour" :key="item">
         <div class="dot">{{ item }}</div>→

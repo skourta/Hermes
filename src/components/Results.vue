@@ -2,7 +2,7 @@
   <v-container class="pb-0">
     <v-card outlined width="100%">
       <v-container class="pt-1">
-        <h2 class="mb-1 primary--text">Results</h2>
+        <h2 class="mb-0 primary--text">Results</h2>
         <v-row>
           <v-col cols="6" class="pt-0">
             <v-text-field

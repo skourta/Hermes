@@ -117,11 +117,11 @@ def run():
     # print(pd.DataFrame(data=instance.data))
     start_time = time.time()
     tour, cost = branchNbound(0, np.array(instance.data))
-    end_time = time.time()
+    end_time = time.time() - start_time
     print(tour)
     print(cost)
-    print(end_time - start_time)
-    return tour, cost, end_time - start_time
+    print(end_time)
+    return tour, cost, end_time
 
 
 if __name__ == "__main__":

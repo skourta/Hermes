@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog v-model="value" persistent max-width="1000">
+    <v-dialog v-model="value" persistent overlay-opacity="0" max-width="1000">
       <v-card>
         <v-card-title class="headline primary--text">History of executions</v-card-title>
         <v-data-table
