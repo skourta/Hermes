@@ -970,6 +970,90 @@
       ],
       "time": 0.7147161960601807,
       "date": "2020-06-20T19:17:58.656Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony [2OPT]",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3400.3018299725086,
+      "tour": [
+        "12",
+        "10",
+        "8",
+        "9",
+        "0",
+        "7",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11",
+        "6"
+      ],
+      "time": 2.5929293632507324,
+      "date": "2020-06-21T19:04:58.324Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony + 2OPT",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3412.226358183001,
+      "tour": [
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1",
+        "0",
+        "8",
+        "9"
+      ],
+      "time": 1.292539119720459,
+      "date": "2020-06-21T19:05:09.867Z"
     }
   ]
 }

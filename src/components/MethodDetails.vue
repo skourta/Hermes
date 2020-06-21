@@ -2,7 +2,7 @@
   <v-container class="py-0">
     <v-card outlined width="100%">
       <v-container class="pt-1">
-        <h2 class="mb-3 primary--text">Method Details</h2>
+        <h2 class="mb-1 primary--text">Method Details</h2>
         <v-text-field
           v-model="method['Name']"
           outlined
@@ -14,7 +14,7 @@
           label="Name"
         ></v-text-field>
         <h3
-          class="mb-3 primary--text"
+          class="mb-0 primary--text"
           v-if="method.paramters && Object.keys(method.paramters).length > 0"
         >Parameters</h3>
         <div v-if="method.paramters">
@@ -95,6 +95,38 @@ const methods = [
   },
   {
     Name: "Ant Colony",
+    paramters: {
+      Mode: ["ACS", "Elitist", "MinMax"],
+      "Colony Size": 10,
+      "Elisit Weight": 1,
+      "Min Scaling Factor": 0.001,
+      Alpha: 1.0,
+      Beta: 3.0,
+      Rho: 0.1,
+      "Pheromone Deposit Weight": 1.0,
+      "Initial Pheromone": 1.0,
+      Steps: 100,
+      selectedMode: "ACS"
+    }
+  },
+  {
+    Name: "Ant Colony [2OPT]",
+    paramters: {
+      Mode: ["ACS", "Elitist", "MinMax"],
+      "Colony Size": 10,
+      "Elisit Weight": 1,
+      "Min Scaling Factor": 0.001,
+      Alpha: 1.0,
+      Beta: 3.0,
+      Rho: 0.1,
+      "Pheromone Deposit Weight": 1.0,
+      "Initial Pheromone": 1.0,
+      Steps: 100,
+      selectedMode: "ACS"
+    }
+  },
+  {
+    Name: "Ant Colony + 2OPT",
     paramters: {
       Mode: ["ACS", "Elitist", "MinMax"],
       "Colony Size": 10,

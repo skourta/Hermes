@@ -4,7 +4,7 @@
       <v-container class="pt-1">
         <h2 class="mb-0 primary--text">Results</h2>
         <v-row>
-          <v-col cols="6" class="pt-0">
+          <v-col cols="6" class="py-0">
             <v-text-field
               label="Cost"
               outlined
@@ -17,7 +17,7 @@
               v-model="cost"
             ></v-text-field>
           </v-col>
-          <v-col cols="6" class="pt-0">
+          <v-col cols="6" class="py-0">
             <v-text-field
               label="Time (s)"
               outlined
@@ -104,6 +104,40 @@ export default {
         case "Ant Colony":
           return {
             name: "AC",
+            args: [
+              `--instance=${this.instance}`,
+              `--mode=${this.paramters.selectedMode}`,
+              `--colony_size=${this.paramters["Colony Size"]}`,
+              `--elitist_weight=${this.paramters["Elisit Weight"]}`,
+              `--min_scaling_factor=${this.paramters["Min Scaling Factor"]}`,
+              `--alpha=${this.paramters["Alpha"]}`,
+              `--beta=${this.paramters["Beta"]}`,
+              `--rho=${this.paramters["Rho"]}`,
+              `--pheromone_deposit_weight=${this.paramters["Pheromone Deposit Weight"]}`,
+              `--initial_pheromone=${this.paramters["Initial Pheromone"]}`,
+              `--steps=${this.paramters["Steps"]}`
+            ]
+          };
+        case "Ant Colony [2OPT]":
+          return {
+            name: "ACO[2OPT]",
+            args: [
+              `--instance=${this.instance}`,
+              `--mode=${this.paramters.selectedMode}`,
+              `--colony_size=${this.paramters["Colony Size"]}`,
+              `--elitist_weight=${this.paramters["Elisit Weight"]}`,
+              `--min_scaling_factor=${this.paramters["Min Scaling Factor"]}`,
+              `--alpha=${this.paramters["Alpha"]}`,
+              `--beta=${this.paramters["Beta"]}`,
+              `--rho=${this.paramters["Rho"]}`,
+              `--pheromone_deposit_weight=${this.paramters["Pheromone Deposit Weight"]}`,
+              `--initial_pheromone=${this.paramters["Initial Pheromone"]}`,
+              `--steps=${this.paramters["Steps"]}`
+            ]
+          };
+        case "Ant Colony + 2OPT":
+          return {
+            name: "ACO+2OPT",
             args: [
               `--instance=${this.instance}`,
               `--mode=${this.paramters.selectedMode}`,

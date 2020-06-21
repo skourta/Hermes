@@ -77,7 +77,12 @@ export default {
       exacts: ["Branch And Bound", "Exhaustive Search"],
       heuristics: ["Nearest Neighbour", "Greedy Algorithm", "2-OPT"],
       metas: ["Ant Colony", "Genetic Algorithm", "Tabu Search"],
-      hybrids: ["Genetic Algorithm + 2-OPT", "Ant Colony + 2-OPT"],
+      hybrids: [
+        "Ant Colony [2OPT]",
+        "Ant Colony + 2OPT",
+        "Genetic Algorithm [2OPT]",
+        "Genetic Algorithm + 2OPT"
+      ],
       radioGroup: 0
     };
   },
