@@ -1054,6 +1054,159 @@
       ],
       "time": 1.292539119720459,
       "date": "2020-06-21T19:05:09.867Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm [2OPT]",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3358.413141705643,
+      "tour": [
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11"
+      ],
+      "time": 1.0498933792114258,
+      "date": "2020-06-21T19:23:52.145Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm + 2OPT",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": "4",
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3396.120900228387,
+      "tour": [
+        "4",
+        "3",
+        "2",
+        "13",
+        "1",
+        "9",
+        "8",
+        "10",
+        "0",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5"
+      ],
+      "time": 0.49054622650146484,
+      "date": "2020-06-21T19:23:59.544Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm + 2OPT",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": "4",
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 0.2960538864135742,
+      "date": "2020-06-21T19:24:06.031Z"
     }
   ]
 }

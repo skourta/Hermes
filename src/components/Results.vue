@@ -168,6 +168,38 @@ export default {
               `--remplacementAlgo=${this.paramters["remplacementAlgo"]}`
             ]
           };
+        case "Genetic Algorithm [2OPT]":
+          return {
+            name: "AG[2OPT]",
+            args: [
+              this.instance,
+              `--population_size=${this.paramters.population_size}`,
+              `--nbgenerations=${this.paramters["nbgenerations"]}`,
+              `--parents_size=${this.paramters["parents_size"]}`,
+              `--eliteSize=${this.paramters["eliteSize"]}`,
+              `--genAlgo=${this.paramters["genAlgo"]}`,
+              `--SelectionAlgo=${this.paramters["SelectionAlgo"]}`,
+              `--nbPointCroisement=${this.paramters["nbPointCroisement"]}`,
+              `--probaMutation=${this.paramters["probaMutation"]}`,
+              `--remplacementAlgo=${this.paramters["remplacementAlgo"]}`
+            ]
+          };
+        case "Genetic Algorithm + 2OPT":
+          return {
+            name: "AG+2OPT",
+            args: [
+              this.instance,
+              `--population_size=${this.paramters.population_size}`,
+              `--nbgenerations=${this.paramters["nbgenerations"]}`,
+              `--parents_size=${this.paramters["parents_size"]}`,
+              `--eliteSize=${this.paramters["eliteSize"]}`,
+              `--genAlgo=${this.paramters["genAlgo"]}`,
+              `--SelectionAlgo=${this.paramters["SelectionAlgo"]}`,
+              `--nbPointCroisement=${this.paramters["nbPointCroisement"]}`,
+              `--probaMutation=${this.paramters["probaMutation"]}`,
+              `--remplacementAlgo=${this.paramters["remplacementAlgo"]}`
+            ]
+          };
         case "Tabu Search":
           return {
             name: "Tabu",

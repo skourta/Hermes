@@ -163,6 +163,52 @@ const methods = [
       SelectionAlgo: "Tournoi"
     }
   },
+
+  {
+    Name: "Genetic Algorithm [2OPT]",
+    paramters: {
+      population_size: 28,
+      nbgenerations: 2,
+      parents_size: 14,
+      eliteSize: 2,
+      genAlgos: ["PPV", "Random"],
+      SelectionAlgos: ["Tournoi", "Elitiste", "RouletteWheel"],
+      nbPointCroisement: 2,
+      probaMutation: "None",
+      remplacementAlgos: [
+        "Tournoi",
+        "Elitiste",
+        "RouletteWheel",
+        "Generationnel"
+      ],
+      remplacementAlgo: "Tournoi",
+      genAlgo: "PPV",
+      SelectionAlgo: "Tournoi"
+    }
+  },
+
+  {
+    Name: "Genetic Algorithm + 2OPT",
+    paramters: {
+      population_size: 28,
+      nbgenerations: 2,
+      parents_size: 14,
+      eliteSize: 2,
+      genAlgos: ["PPV", "Random"],
+      SelectionAlgos: ["Tournoi", "Elitiste", "RouletteWheel"],
+      nbPointCroisement: 2,
+      probaMutation: "None",
+      remplacementAlgos: [
+        "Tournoi",
+        "Elitiste",
+        "RouletteWheel",
+        "Generationnel"
+      ],
+      remplacementAlgo: "Tournoi",
+      genAlgo: "PPV",
+      SelectionAlgo: "Tournoi"
+    }
+  },
   {
     Name: "Tabu Search",
     paramters: {
