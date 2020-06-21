@@ -18,7 +18,10 @@
           v-if="method.paramters && Object.keys(method.paramters).length > 0"
         >Parameters</h3>
         <div v-if="method.paramters">
-          <div class="gridContainer mt-2" v-if=" method.Name !== 'Genetic Algorithm'">
+          <div
+            class="gridContainer mt-2"
+            v-if=" method.Name !== 'Genetic Algorithm' && method.Name !== 'Genetic Algorithm [2OPT]' && method.Name !== 'Genetic Algorithm + 2OPT'"
+          >
             <div v-for="key in Object.keys(method.paramters)" :key="key">
               <v-text-field
                 v-if="(key !== 'Mode') && (key !== 'selectedMode')"

@@ -1207,6 +1207,816 @@
       ],
       "time": 0.2960538864135742,
       "date": "2020-06-21T19:24:06.031Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Branch And Bound",
+        "parameters": {}
+      },
+      "cost": 3358.413141705643,
+      "tour": [
+        "0",
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1"
+      ],
+      "time": 9.42737078666687,
+      "date": "2020-06-21T20:00:29.471Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Nearest Neighbour",
+        "parameters": {
+          "start": "5"
+        }
+      },
+      "cost": 4216.585948852144,
+      "tour": [
+        "0",
+        "7",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "11",
+        "5",
+        "6",
+        "12",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 0.0007548332214355469,
+      "date": "2020-06-21T20:00:36.205Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Nearest Neighbour",
+        "parameters": {
+          "start": "5"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 0.0007636547088623047,
+      "date": "2020-06-21T20:00:43.480Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Greedy Algorithm",
+        "parameters": {}
+      },
+      "cost": 4032.358594605831,
+      "tour": [
+        "4",
+        "3",
+        "2",
+        "13",
+        "5",
+        "11",
+        "6",
+        "12",
+        "1",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9"
+      ],
+      "time": 0.0005364418029785156,
+      "date": "2020-06-21T20:00:51.608Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "2-OPT",
+        "parameters": {}
+      },
+      "cost": 3611.1727122195443,
+      "tour": [
+        "5",
+        "11",
+        "13",
+        "2",
+        "1",
+        "7",
+        "0",
+        "9",
+        "8",
+        "10",
+        "12",
+        "6",
+        "4",
+        "3"
+      ],
+      "time": 0.04510498046875,
+      "date": "2020-06-21T20:00:57.650Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3475.6436472380437,
+      "tour": [
+        "1",
+        "7",
+        "0",
+        "9",
+        "8",
+        "10",
+        "12",
+        "6",
+        "5",
+        "11",
+        "4",
+        "3",
+        "2",
+        "13"
+      ],
+      "time": 1.3989861011505127,
+      "date": "2020-06-21T20:01:05.496Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 0.04870247840881348,
+      "date": "2020-06-21T20:01:10.787Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": 1000,
+          "size": 20,
+          "start": 0
+        }
+      },
+      "cost": 3891.7648448338114,
+      "tour": [
+        "0",
+        "1",
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "5",
+        "11",
+        "13",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 18.580796003341675,
+      "date": "2020-06-21T20:01:35.102Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony [2OPT]",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3460.1378412567497,
+      "tour": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11",
+        "13",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "time": 2.943671464920044,
+      "date": "2020-06-21T20:02:04.698Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony + 2OPT",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1",
+        "0",
+        "9",
+        "8",
+        "10",
+        "7"
+      ],
+      "time": 1.6596627235412598,
+      "date": "2020-06-21T20:02:12.752Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm [2OPT]",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3358.413141705643,
+      "tour": [
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11"
+      ],
+      "time": 1.2884008884429932,
+      "date": "2020-06-21T20:02:21.396Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm + 2OPT",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3396.120900228387,
+      "tour": [
+        "4",
+        "3",
+        "2",
+        "13",
+        "1",
+        "9",
+        "8",
+        "10",
+        "0",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5"
+      ],
+      "time": 0.6178281307220459,
+      "date": "2020-06-21T20:02:27.542Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "OrTools",
+        "parameters": {}
+      },
+      "cost": 3353,
+      "tour": [
+        "0",
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1"
+      ],
+      "time": 0.039525508880615234,
+      "date": "2020-06-21T20:02:33.274Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "OrTools",
+        "parameters": {}
+      },
+      "cost": 3353,
+      "tour": [
+        "0",
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1"
+      ],
+      "time": 0.025416851043701172,
+      "date": "2020-06-21T20:56:50.669Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Branch And Bound",
+        "parameters": {}
+      },
+      "cost": 3358.413141705643,
+      "tour": [
+        "0",
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1"
+      ],
+      "time": 8.564808368682861,
+      "date": "2020-06-21T20:58:08.566Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "2-OPT",
+        "parameters": {}
+      },
+      "cost": 3400.3018299725086,
+      "tour": [
+        "8",
+        "9",
+        "0",
+        "7",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "10"
+      ],
+      "time": 0.05525612831115723,
+      "date": "2020-06-21T20:58:35.231Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Tabu Search",
+        "parameters": {
+          "iterations": "100",
+          "size": 20,
+          "start": "4"
+        }
+      },
+      "cost": 3358.4131417056433,
+      "tour": [
+        "4",
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "10",
+        "8",
+        "9",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3"
+      ],
+      "time": 1.6761183738708496,
+      "date": "2020-06-21T20:59:21.589Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3396.1209002283877,
+      "tour": [
+        "5",
+        "11",
+        "6",
+        "12",
+        "7",
+        "0",
+        "10",
+        "8",
+        "9",
+        "1",
+        "13",
+        "2",
+        "3",
+        "4"
+      ],
+      "time": 0.04910421371459961,
+      "date": "2020-06-21T20:59:48.728Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Genetic Algorithm [2OPT]",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 3358.413141705643,
+      "tour": [
+        "9",
+        "8",
+        "10",
+        "7",
+        "12",
+        "6",
+        "11",
+        "5",
+        "4",
+        "3",
+        "2",
+        "13",
+        "1",
+        "0"
+      ],
+      "time": 1.1016838550567627,
+      "date": "2020-06-21T21:00:25.305Z"
+    },
+    {
+      "instance": "berlin52.tsp",
+      "method": {
+        "name": "Genetic Algorithm [2OPT]",
+        "parameters": {
+          "population_size": 28,
+          "nbgenerations": 2,
+          "parents_size": 14,
+          "eliteSize": 2,
+          "genAlgos": [
+            "PPV",
+            "Random"
+          ],
+          "SelectionAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel"
+          ],
+          "nbPointCroisement": 2,
+          "probaMutation": "None",
+          "remplacementAlgos": [
+            "Tournoi",
+            "Elitiste",
+            "RouletteWheel",
+            "Generationnel"
+          ],
+          "remplacementAlgo": "Tournoi",
+          "genAlgo": "PPV",
+          "SelectionAlgo": "Tournoi"
+        }
+      },
+      "cost": 7542,
+      "tour": [
+        "44",
+        "18",
+        "40",
+        "7",
+        "8",
+        "9",
+        "42",
+        "32",
+        "50",
+        "10",
+        "51",
+        "13",
+        "12",
+        "46",
+        "25",
+        "26",
+        "27",
+        "11",
+        "24",
+        "3",
+        "5",
+        "14",
+        "4",
+        "23",
+        "47",
+        "37",
+        "36",
+        "39",
+        "38",
+        "35",
+        "34",
+        "33",
+        "43",
+        "45",
+        "15",
+        "28",
+        "49",
+        "19",
+        "22",
+        "29",
+        "1",
+        "6",
+        "41",
+        "20",
+        "16",
+        "2",
+        "17",
+        "30",
+        "21",
+        "0",
+        "48",
+        "31"
+      ],
+      "time": 21.12216281890869,
+      "date": "2020-06-21T21:01:01.288Z"
+    },
+    {
+      "instance": "burma14.tsp",
+      "method": {
+        "name": "Ant Colony",
+        "parameters": {
+          "Mode": [
+            "ACS",
+            "Elitist",
+            "MinMax"
+          ],
+          "Colony Size": 10,
+          "Elisit Weight": 1,
+          "Min Scaling Factor": 0.001,
+          "Alpha": 1,
+          "Beta": 3,
+          "Rho": 0.1,
+          "Pheromone Deposit Weight": 1,
+          "Initial Pheromone": 1,
+          "Steps": 100,
+          "selectedMode": "ACS"
+        }
+      },
+      "cost": 3565.4921173286875,
+      "tour": [
+        "10",
+        "8",
+        "7",
+        "0",
+        "1",
+        "13",
+        "2",
+        "3",
+        "11",
+        "5",
+        "4",
+        "6",
+        "12",
+        "9"
+      ],
+      "time": 1.1847238540649414,
+      "date": "2020-06-21T22:35:09.593Z"
     }
   ]
 }
