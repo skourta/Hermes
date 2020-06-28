@@ -45,3 +45,5 @@ yarn electron:serve
 | Tabu Search      | BENBELGACEM Rahma Aya |
 | Or-Tools Usage   | KOURTA Smail          |
 | TSPlib Parser    | KOURTA Smail          |
+
+The UI was developed by Smail KOURTA using Electron, VueJS and lowDB.
