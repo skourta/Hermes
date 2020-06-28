@@ -9,11 +9,11 @@ This project is based on Electron and VueJs
 
 1. First thing you need to do is clone this repository
 ```
-git clone 
+git clone https://github.com/skourta/Hermes
 ```
 2. Positing yourself in the root of the project:
 ```
-cd   
+cd   Hermes
 ```
 3. Install dependencies using your favorite package manager 
 ```
