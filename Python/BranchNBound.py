@@ -1,3 +1,4 @@
+# B&B Implementation provided by Smail KOURTA, refactored into a command line program by Smail KOURTA
 import numpy as np
 import Parser
 import argparse

@@ -1,24 +1,47 @@
-# tsp_optim
+# Hermes
 
-## Project setup
-```
-yarn install
-```
+**Hermes** is a hybrid desktop application built using Electron and Vue to solve the Symmetric Traveling Salesman Problem(TSP), it provides different methods written in Python to solve TSP varying from exact ones to hybrid meta-heuristics.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 1.1. Requirements
+This project is based on Electron and VueJs
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 1.2. Build
 
-### Lints and fixes files
+1. First thing you need to do is clone this repository
 ```
-yarn lint
+git clone 
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+2. Positing yourself in the root of the project:
+```
+cd   
+```
+3. Install dependencies using your favorite package manager 
+```
+yarn
+```
+4. (optional) you can build your executable by running
+```
+yarn electron:build
+```
+## 1.3. Usage
+You can run build the project then run the executable or serve the project in development mode:
+```
+yarn electron:serve
+```
+## Credits
+| Algorithm        | Provided By           |
+| ---------------- | --------------------- |
+| 2OPT             | BENABED Youcef        |
+| AC               | KOURTA Smail          |
+| ACO[2OPT]        | TAHMI Omar            |
+| ACO+2OPT         | TAHMI Omar            |
+| AG               | IFERROUDJENE Mouloud  |
+| AG[2OPT]         | IFERROUDJENE Mouloud  |
+| AG+2OPT          | IFERROUDJENE Mouloud  |
+| Branch and Bound | KOURTA Smail          |
+| Brute Force      | IFERROUDJENE Mouloud  |
+| Greedy Algorithm | BENDJABALLAH Oussama  |
+| Nearest Neighbor | BENDJABALLAH Oussama  |
+| Tabu Search      | BENBELGACEM Rahma Aya |
+| Or-Tools Usage   | KOURTA Smail          |
+| TSPlib Parser    | KOURTA Smail          |
