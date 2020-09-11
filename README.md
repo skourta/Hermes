@@ -2,6 +2,8 @@
 
 **Hermes** is a hybrid desktop application built using Electron and Vue to solve the Symmetric Traveling Salesman Problem(TSP), it provides different methods written in Python to solve TSP varying from exact ones to hybrid meta-heuristics.
 
+![Preview](https://i.imgur.com/WcoqAfV.png)
+
 ## 1.1. Requirements
 This project is based on Electron and VueJs
 
